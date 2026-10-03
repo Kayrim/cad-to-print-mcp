@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cad-to-print-mcp"
+version = "0.1.0"
+description = "Local MCP server connecting FreeCAD, OrcaSlicer and Moonraker"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "CAD to Print MCP contributors"}]
+dependencies = ["mcp>=2,<3"]
+keywords = ["mcp", "orcaslicer", "3d-printing", "slicer"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+cad-to-print-mcp = "cad_to_print_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
